@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ifqy Gifha Azhar</title>
+    <link rel="stylesheet" href="css/matcha.css">
+    <style>
+        body {
+            background-image: url("images/adventure_time.jpg");
+        }
+        .black-text {
+            color: black;
+        }
+    </style>
+</head>
+<body background="images/adventure_time.jpg">
+    <h1 class="black-text">Ini adalah web pertama ku</h1> 
+    <p class="black-text">Sebuah gambar dari folder <img src="images/pixel1.jpg" alt="" width="80" height="80" align="left"></p>
+<form action="" method="">
+    <fieldset>
+        <legend>Formulir</legend>
+        <p><label for="name">Nama Depan: </label><input type="text" name="name" id="name"></p>
+        <p><label for="name">Nama Belakang: </label><input type="text" name="name" id="name_terakhir"></p>
+        <p><label for="name">Password: </label><input type="password" name="name" id="name"></p>
+        <p><label for="jk">Jenis Kelamin:</label><select name="jk" id=""><option value="Laki-laki">Laki-laki</option><option value="Perempuan">Perempuan</option></select></p>
+        <p><label for="jkradio">Jenis Kelamin pake radio:</label><br><input type="radio" name="jkradio" id=""> Laki-laki</p>
+        <p><input type="radio" name="jkradio" id="" checked="checked"> Prempuan</p>
+        <p><label for="jkCheckbox">Jenis Kelamin Pake Checkbox:</label></p>
+        <p><input type="checkbox" name="jkCheckbox" id="" checked="checked"> Laki-laki</p>
+        <p><input type="checkbox" name="jkCheckbox" id=""> Prempuan</p>
+        <input type="button" value="Submit">
+    </fieldset>
+    <p><b>Perhatian !!!</b> Ketika mengisi password akan muncul bulat</p>
+</form>
+
+<table border="1" cellpadding="10" cellspacing="0">
+    <thead>
+        <tr>
+            <th>Nama Depan</th>
+            <th>Nama Belakang</th>
+            <th>Password</th>
+            <th>Jenis Kelamin</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="black-text" id="first-name"></td>
+            <td class="black-text" id="last-name"></td>
+            <td class="black-text" id="password"></td>
+            <td class="black-text" id="gender"></td>
+        </tr>
+    </tbody>
+</table>
+
+</body>
+<script>
+    // Logika untuk menambahkan data ke tabel, Jenis kelamin diambil dari select option
+    document.querySelector('input[type="button"]').onclick = function() {
+
+        const firstName = document.getElementById('name').value;
+        const lastName = document.getElementById('name_terakhir').value; 
+        const password = document.querySelector('input[type="password"]').value;
+        const gender = document.querySelector('select[name="jk"]').value;
+
+
+        document.getElementById('first-name').innerText = firstName;
+        document.getElementById('last-name').innerText = lastName;
+        document.getElementById('password').innerText = password;
+        document.getElementById('gender').innerText = gender;
+    }
+</script>
+
+</html>
